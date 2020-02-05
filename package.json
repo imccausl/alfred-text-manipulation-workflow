@@ -1,0 +1,15 @@
+{
+  "name": "user.workflow.5E58F07F-0D56-44BD-AB58-316286A60828",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alfy": "^0.9.1"
+  }
+}
