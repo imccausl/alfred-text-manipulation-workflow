@@ -1,8 +1,9 @@
 const alfy = require("alfy");
 
 function formatList(data, joinWith = ",", wrapper = "", prefix = "") {
-    return data
-        .split("\n")
+    const arrayFromData = removeDuplicates(data);
+
+    return arrayFromData
         .filter(item => item.trim() !== "")
         .map(item => `${wrapper}${prefix}${item.trim()}${wrapper}`)
         .join(joinWith);
@@ -12,6 +13,10 @@ function formatGql(server, data) {
     const prefix = `production:${server.toLowerCase()}-`;
 
     return formatList(data, ",", '\\"', prefix);
+}
+
+function removeDuplicates(data) {
+    return Array.from(new Set(data.split("\n")));
 }
 
 const SERVER_CODES = ["us", "ca"];
