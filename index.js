@@ -35,6 +35,7 @@ const list = [
     {
         title: "Inventory IDs Formatted for Removal",
         subtitle: filterForRemoval,
+        arg: filterForRemoval,
         text: {
             copy: filterForRemoval,
             largetype: filterForRemoval
@@ -43,6 +44,7 @@ const list = [
     {
         title: "Unmodified Comma-Separated Output",
         subtitle: commaSeparatedOutput,
+        arg: commaSeparatedOutput,
         text: {
             copy: commaSeparatedOutput,
             largetype: commaSeparatedOutput
@@ -51,6 +53,7 @@ const list = [
     {
         title: "Comma-Separated Output in Single Quotes",
         subtitle: commaSeparatedInSingleQuotes,
+        arg: commaSeparatedInSingleQuotes,
         text: {
             copy: commaSeparatedInSingleQuotes,
             largetype: commaSeparatedInSingleQuotes
@@ -59,6 +62,7 @@ const list = [
     {
         title: "Graph QL US Server Output (Comma-Separated)",
         subtitle: usServerGql,
+        arg: usServerGql,
         text: {
             copy: usServerGql,
             largetype: usServerGql
@@ -67,6 +71,7 @@ const list = [
     {
         title: "Graph QL CA Server Output (Comma-Separated)",
         subtitle: caServerGql,
+        arg: caServerGql,
         text: {
             copy: caServerGql,
             largetype: caServerGql
