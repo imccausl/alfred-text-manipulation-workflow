@@ -9,6 +9,12 @@ function formatList(data, joinWith = ",", wrapper = "", prefix = "") {
         .join(joinWith);
 }
 
+function namespaceData(server, data) {
+    const prefix = `production:${server.toLowerCase()}-`;
+
+    return formatList(data, ",", "", prefix);
+}
+
 function formatGql(server, data) {
     const prefix = `production:${server.toLowerCase()}-`;
 
@@ -27,6 +33,9 @@ const cleanedInput = alfy.input
 const commaSeparatedOutput = formatList(cleanedInput);
 const commaSeparatedInSingleQuotes = formatList(cleanedInput, ",", "'");
 const filterForRemoval = formatList(cleanedInput, "\n");
+const [namespacedUS, namespacedCA] = SERVER_CODES.map(server =>
+    namespaceData(server, cleanedInput)
+);
 const [usServerGql, caServerGql] = SERVER_CODES.map(server =>
     formatGql(server, cleanedInput)
 );
@@ -57,6 +66,24 @@ const list = [
         text: {
             copy: commaSeparatedInSingleQuotes,
             largetype: commaSeparatedInSingleQuotes
+        }
+    },
+    {
+        title: "Comma-Separated, Namespaced Output (US Server)",
+        subtitle: namespacedUS,
+        arg: namespacedUS,
+        text: {
+            copy: namespacedUS,
+            largetype: namespacedUS
+        }
+    },
+    {
+        title: "Comma-Separated, Namespaced Output (CA Server)",
+        subtitle: namespacedCA,
+        arg: namespacedCA,
+        text: {
+            copy: namespacedCA,
+            largetype: namespacedCA
         }
     },
     {
