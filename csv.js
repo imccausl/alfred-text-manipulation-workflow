@@ -21,6 +21,20 @@ function convertToAlfredOutput(obj) {
   return items;
 }
 
+function groupByColumn(records) {
+  return records.reduce((obj, record) => {
+    Object.keys(record).forEach(key => {
+      if (!obj[key]) {
+        obj[key] = [record[key]];
+      } else {
+        obj[key].push(record[key]);
+      }
+    });
+
+    return obj;
+  }, {});
+}
+
 const csv_config = {
   delimiter: "\t",
   trim: true,
@@ -28,16 +42,6 @@ const csv_config = {
 };
 
 const records = parse(alfy.input, csv_config);
-const columnLists = records.reduce((obj, record) => {
-  Object.keys(record).forEach(key => {
-    if (!obj[key]) {
-      obj[key] = [record[key]];
-    } else {
-      obj[key].push(record[key]);
-    }
-  });
+const groupedRecords = groupByColumn(records);
 
-  return obj;
-}, {});
-
-alfy.output(convertToAlfredOutput(columnLists));
+alfy.output(convertToAlfredOutput(groupedRecords));
