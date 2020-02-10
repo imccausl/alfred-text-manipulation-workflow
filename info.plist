@@ -378,7 +378,7 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>table</string>
+				<string>detable</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
