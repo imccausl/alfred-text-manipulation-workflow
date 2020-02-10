@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "alfy": "^0.9.1",
-    "csv-parser": "^2.3.2"
+    "csv-parse": "^4.8.5"
   }
 }

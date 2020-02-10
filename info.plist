@@ -8,6 +8,19 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>047BE0DC-5638-4CD7-9231-06B99AE1C03F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>90A788B0-D322-447F-91F4-3295051C1F87</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>099A8DF2-B43E-40FF-B057-EB23D6DFB2E1</key>
 		<array>
 			<dict>
@@ -25,7 +38,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>8BEDF8C0-9142-43BA-A574-A46B55741CDA</string>
+				<string>9D8D39DD-1A12-46DE-83DB-F91242CF053D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -65,6 +78,32 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1EA1DD77-7073-4467-A3C4-0B459B258DB6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>90A788B0-D322-447F-91F4-3295051C1F87</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>945BB3D5-B1F4-40B6-94AA-C94B19F366D2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>945BB3D5-B1F4-40B6-94AA-C94B19F366D2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9D8D39DD-1A12-46DE-83DB-F91242CF053D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -117,23 +156,6 @@
 			<string>AACFA712-6322-42DD-BEF0-EBA2CE750618</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>9D8D39DD-1A12-46DE-83DB-F91242CF053D</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -203,6 +225,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>9D8D39DD-1A12-46DE-83DB-F91242CF053D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -220,23 +259,6 @@
 			<string>511E1E48-B898-4ACC-9CCA-B02C8B5FD6CF</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>8BEDF8C0-9142-43BA-A574-A46B55741CDA</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -303,11 +325,104 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Extracting data...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node csv.js "$CLIPBOARD"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Extract specific data from the text on the clipboard</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>945BB3D5-B1F4-40B6-94AA-C94B19F366D2</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>table</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Convert table to lists of items under headers</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>047BE0DC-5638-4CD7-9231-06B99AE1C03F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>CLIPBOARD</key>
+					<string>{clipboard}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>90A788B0-D322-447F-91F4-3295051C1F87</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>047BE0DC-5638-4CD7-9231-06B99AE1C03F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>65</integer>
+			<key>ypos</key>
+			<integer>335</integer>
+		</dict>
 		<key>099A8DF2-B43E-40FF-B057-EB23D6DFB2E1</key>
 		<dict>
 			<key>xpos</key>
@@ -343,19 +458,26 @@
 			<key>ypos</key>
 			<integer>110</integer>
 		</dict>
-		<key>8BEDF8C0-9142-43BA-A574-A46B55741CDA</key>
+		<key>90A788B0-D322-447F-91F4-3295051C1F87</key>
 		<dict>
 			<key>xpos</key>
-			<integer>520</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<integer>205</integer>
+			<integer>370</integer>
+		</dict>
+		<key>945BB3D5-B1F4-40B6-94AA-C94B19F366D2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>325</integer>
 		</dict>
 		<key>9D8D39DD-1A12-46DE-83DB-F91242CF053D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>515</integer>
+			<integer>630</integer>
 			<key>ypos</key>
-			<integer>80</integer>
+			<integer>135</integer>
 		</dict>
 		<key>AACFA712-6322-42DD-BEF0-EBA2CE750618</key>
 		<dict>
