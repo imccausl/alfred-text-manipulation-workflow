@@ -6,12 +6,13 @@ const emails = input.match(/[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]
 if (emails === null) {
 	alfy.error("No email addresses found")
 } else {
-	const commaSeparatedEmails = emails.map(item => `'${item}'`).join();
-	const newLineSeparatedEmails = emails.join("\n");
+	const dedupedEmails = Array.from(new Set(emails));
+	const commaSeparatedEmails = dedupedEmails.map(item => `'${item}'`).join();
+	const newLineSeparatedEmails = dedupedEmails.join("\n");
 	
 	const list = [
 		{
-			title: "Comma-separated list of Emails",
+			title: "Comma-separated list of Emails (No duplicates)",
 			subtitle: commaSeparatedEmails,
 			arg: commaSeparatedEmails,
 			text: {
@@ -20,7 +21,7 @@ if (emails === null) {
 			}
 		},
 		{
-			title: "New line-Separated list of Emails",
+			title: "New line-Separated list of Emails (No duplicates)",
 			subtitle: newLineSeparatedEmails,
 			arg: newLineSeparatedEmails,
 			text: {
