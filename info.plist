@@ -8,11 +8,50 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>099A8DF2-B43E-40FF-B057-EB23D6DFB2E1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>134F9FDC-9033-45D4-8972-1BF4AFBB02F4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>134F9FDC-9033-45D4-8972-1BF4AFBB02F4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8BEDF8C0-9142-43BA-A574-A46B55741CDA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1EA1DD77-7073-4467-A3C4-0B459B258DB6</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>9D8D39DD-1A12-46DE-83DB-F91242CF053D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>511E1E48-B898-4ACC-9CCA-B02C8B5FD6CF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>099A8DF2-B43E-40FF-B057-EB23D6DFB2E1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -84,7 +123,7 @@
 				<key>runningsubtext</key>
 				<string>Workin on it...</string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node index.js "$CLIPBOARD"</string>
+				<string>./node_modules/.bin/run-node list.js "$CLIPBOARD"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -161,17 +200,141 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>8BEDF8C0-9142-43BA-A574-A46B55741CDA</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Extracting data...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node extract.js "$CLIPBOARD"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Extract specific data from the text on the clipboard</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>134F9FDC-9033-45D4-8972-1BF4AFBB02F4</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>extract</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Extract data from what's on the clipboard</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>511E1E48-B898-4ACC-9CCA-B02C8B5FD6CF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>CLIPBOARD</key>
+					<string>{clipboard}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>099A8DF2-B43E-40FF-B057-EB23D6DFB2E1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>099A8DF2-B43E-40FF-B057-EB23D6DFB2E1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>385</integer>
+			<key>ypos</key>
+			<integer>395</integer>
+		</dict>
+		<key>134F9FDC-9033-45D4-8972-1BF4AFBB02F4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>495</integer>
+			<key>ypos</key>
+			<integer>360</integer>
+		</dict>
 		<key>1EA1DD77-7073-4467-A3C4-0B459B258DB6</key>
 		<dict>
 			<key>xpos</key>
 			<integer>370</integer>
 			<key>ypos</key>
 			<integer>80</integer>
+		</dict>
+		<key>511E1E48-B898-4ACC-9CCA-B02C8B5FD6CF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>195</integer>
+			<key>ypos</key>
+			<integer>370</integer>
 		</dict>
 		<key>5C10E7EB-7EF8-477F-B526-47F183457C54</key>
 		<dict>
@@ -180,12 +343,19 @@
 			<key>ypos</key>
 			<integer>110</integer>
 		</dict>
+		<key>8BEDF8C0-9142-43BA-A574-A46B55741CDA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>680</integer>
+			<key>ypos</key>
+			<integer>345</integer>
+		</dict>
 		<key>9D8D39DD-1A12-46DE-83DB-F91242CF053D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>640</integer>
+			<integer>615</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>120</integer>
 		</dict>
 		<key>AACFA712-6322-42DD-BEF0-EBA2CE750618</key>
 		<dict>
@@ -195,13 +365,8 @@
 			<integer>205</integer>
 		</dict>
 	</dict>
-	<key>variables</key>
-	<dict>
-		<key>output</key>
-		<string></string>
-	</dict>
 	<key>version</key>
-	<string></string>
+	<string>1</string>
 	<key>webaddress</key>
 	<string>https://www.ianmccaus.land</string>
 </dict>
