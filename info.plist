@@ -73,6 +73,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>538A9EF4-127E-4E4A-9582-A691E32E0AD8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AB3B93C9-009D-41DF-950A-15A40E72515A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>5C10E7EB-7EF8-477F-B526-47F183457C54</key>
 		<array>
 			<dict>
@@ -112,11 +125,47 @@
 				<false/>
 			</dict>
 		</array>
+		<key>9D8D39DD-1A12-46DE-83DB-F91242CF053D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>538A9EF4-127E-4E4A-9582-A691E32E0AD8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>3816B06A-6D22-456C-A664-89D6B41CF635</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>AACFA712-6322-42DD-BEF0-EBA2CE750618</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>5C10E7EB-7EF8-477F-B526-47F183457C54</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AB3B93C9-009D-41DF-950A-15A40E72515A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2B011296-B44C-4DE8-B2C1-DC74C2A9E218</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -230,7 +279,7 @@
 				<key>clipboardtext</key>
 				<string>{query}</string>
 				<key>transient</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
@@ -310,6 +359,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>seconds</key>
+				<string>0.3</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>538A9EF4-127E-4E4A-9582-A691E32E0AD8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>variables</key>
@@ -375,6 +437,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{var:CLIPBOARD}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>AB3B93C9-009D-41DF-950A-15A40E72515A</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -396,6 +475,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Pasted to Front-most App</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>3816B06A-6D22-456C-A664-89D6B41CF635</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>variables</key>
@@ -408,6 +508,27 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>90A788B0-D322-447F-91F4-3295051C1F87</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>The clipboard contents that comprised the input for this workflow have been restored.</string>
+				<key>title</key>
+				<string>Previous Clipboard Contents Restored</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>2B011296-B44C-4DE8-B2C1-DC74C2A9E218</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -444,12 +565,33 @@
 			<key>ypos</key>
 			<integer>80</integer>
 		</dict>
+		<key>2B011296-B44C-4DE8-B2C1-DC74C2A9E218</key>
+		<dict>
+			<key>xpos</key>
+			<integer>885</integer>
+			<key>ypos</key>
+			<integer>485</integer>
+		</dict>
+		<key>3816B06A-6D22-456C-A664-89D6B41CF635</key>
+		<dict>
+			<key>xpos</key>
+			<integer>680</integer>
+			<key>ypos</key>
+			<integer>345</integer>
+		</dict>
 		<key>511E1E48-B898-4ACC-9CCA-B02C8B5FD6CF</key>
 		<dict>
 			<key>xpos</key>
 			<integer>70</integer>
 			<key>ypos</key>
 			<integer>200</integer>
+		</dict>
+		<key>538A9EF4-127E-4E4A-9582-A691E32E0AD8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>850</integer>
+			<key>ypos</key>
+			<integer>210</integer>
 		</dict>
 		<key>5C10E7EB-7EF8-477F-B526-47F183457C54</key>
 		<dict>
@@ -461,9 +603,9 @@
 		<key>90A788B0-D322-447F-91F4-3295051C1F87</key>
 		<dict>
 			<key>xpos</key>
-			<integer>230</integer>
+			<integer>235</integer>
 			<key>ypos</key>
-			<integer>370</integer>
+			<integer>365</integer>
 		</dict>
 		<key>945BB3D5-B1F4-40B6-94AA-C94B19F366D2</key>
 		<dict>
@@ -475,9 +617,9 @@
 		<key>9D8D39DD-1A12-46DE-83DB-F91242CF053D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>630</integer>
+			<integer>675</integer>
 			<key>ypos</key>
-			<integer>135</integer>
+			<integer>180</integer>
 		</dict>
 		<key>AACFA712-6322-42DD-BEF0-EBA2CE750618</key>
 		<dict>
@@ -485,6 +627,13 @@
 			<integer>70</integer>
 			<key>ypos</key>
 			<integer>80</integer>
+		</dict>
+		<key>AB3B93C9-009D-41DF-950A-15A40E72515A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>910</integer>
+			<key>ypos</key>
+			<integer>325</integer>
 		</dict>
 	</dict>
 	<key>version</key>
