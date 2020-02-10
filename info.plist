@@ -90,13 +90,51 @@
 	<key>createdby</key>
 	<string>Ian McCausland</string>
 	<key>description</key>
-	<string>Turn a /n separated list into a comma-separated one</string>
+	<string>Perform various operations on text in the clipboard</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Comma Separate</string>
+	<string>PasteTool</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>convert</string>
+				<key>subtext</key>
+				<string>Create Lists for Pasting into SQL / TH Tools</string>
+				<key>text</key>
+				<string>Modify Clipboard</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>AACFA712-6322-42DD-BEF0-EBA2CE750618</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>9D8D39DD-1A12-46DE-83DB-F91242CF053D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -165,38 +203,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>9D8D39DD-1A12-46DE-83DB-F91242CF053D</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>convert</string>
+				<string>extract</string>
 				<key>subtext</key>
-				<string>Create Lists for Pasting into SQL / TH Tools</string>
+				<string></string>
 				<key>text</key>
-				<string>Modify Clipboard</string>
+				<string>Extract data from what's on the clipboard</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>AACFA712-6322-42DD-BEF0-EBA2CE750618</string>
+			<string>511E1E48-B898-4ACC-9CCA-B02C8B5FD6CF</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -267,27 +288,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>extract</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Extract data from what's on the clipboard</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>511E1E48-B898-4ACC-9CCA-B02C8B5FD6CF</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>variables</key>
@@ -311,30 +311,30 @@
 		<key>099A8DF2-B43E-40FF-B057-EB23D6DFB2E1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>385</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<integer>395</integer>
+			<integer>230</integer>
 		</dict>
 		<key>134F9FDC-9033-45D4-8972-1BF4AFBB02F4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>495</integer>
+			<integer>305</integer>
 			<key>ypos</key>
-			<integer>360</integer>
+			<integer>205</integer>
 		</dict>
 		<key>1EA1DD77-7073-4467-A3C4-0B459B258DB6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>370</integer>
+			<integer>305</integer>
 			<key>ypos</key>
 			<integer>80</integer>
 		</dict>
 		<key>511E1E48-B898-4ACC-9CCA-B02C8B5FD6CF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>195</integer>
+			<integer>70</integer>
 			<key>ypos</key>
-			<integer>370</integer>
+			<integer>200</integer>
 		</dict>
 		<key>5C10E7EB-7EF8-477F-B526-47F183457C54</key>
 		<dict>
@@ -346,23 +346,23 @@
 		<key>8BEDF8C0-9142-43BA-A574-A46B55741CDA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>680</integer>
+			<integer>520</integer>
 			<key>ypos</key>
-			<integer>345</integer>
+			<integer>205</integer>
 		</dict>
 		<key>9D8D39DD-1A12-46DE-83DB-F91242CF053D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>615</integer>
+			<integer>515</integer>
 			<key>ypos</key>
-			<integer>120</integer>
+			<integer>80</integer>
 		</dict>
 		<key>AACFA712-6322-42DD-BEF0-EBA2CE750618</key>
 		<dict>
 			<key>xpos</key>
 			<integer>70</integer>
 			<key>ypos</key>
-			<integer>205</integer>
+			<integer>80</integer>
 		</dict>
 	</dict>
 	<key>version</key>
